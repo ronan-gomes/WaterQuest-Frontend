@@ -1,0 +1,23 @@
+.tela{
+    background-color: #fff;
+    height: 900px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    background-image: url("/assets/OIP.jpeg"); ;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    border-radius: 24px;
+
+
+}
+
+.home-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1.4rem;
+}

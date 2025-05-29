@@ -1,0 +1,26 @@
+table{
+  table-layout: fixed;
+  width: 100%;
+}
+td{
+  border: 1px solid #ccc;
+  width: 50%
+}
+
+.container{
+  width: 600px;
+  justify-content: start;
+  max-height: 70vh;
+  overflow-y: auto;
+  margin: 20px 20px;
+}
+
+#quizvazio{
+  display: none;
+}
+
+.form-control:focus, .form-select:focus{
+  border-color: #ffffff;
+  box-shadow: 0 0 0 0.2rem;
+
+}

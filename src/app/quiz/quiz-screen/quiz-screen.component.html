@@ -1,0 +1,32 @@
+<div class="container">
+  @if (quiz && !finished) {
+    <div class="form-group">
+      <span class="quiz-name">{{quiz.name}}</span>
+      <h5>{{ num + 1 }}. {{ quiz.questions[num].question }}</h5>
+      @for (r of randomArr; track r) {
+        <div>
+          @if (quiz.questions[num][r] !== null && quiz.questions[num][r] !== '') {
+            <div class="container-label">
+              <label class="btn btn-light" id="{{ r }}" (click)="check($event)">{{quiz.questions[num][r]}}</label>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  }
+  @if (quiz && !finished) {
+    <span class="currentQuestion">{{num + 1}}/{{numQuestions}}</span>
+  }
+</div>
+
+@if (finished) {
+  <div class="card">
+    <div class="card-body">
+      <p class="card-text">Você acertou {{correctAnswers}} de {{numQuestions}} questões</p>
+      <div class="card-btns">
+        <button type="button" class="btn btn-secondary" (click)="restart()">Refazer</button>
+        <button type="button" class="btn btn-danger" (click)="quit()">Sair</button>
+      </div>
+    </div>
+  </div>
+}

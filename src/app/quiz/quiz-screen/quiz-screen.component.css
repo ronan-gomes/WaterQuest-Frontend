@@ -1,0 +1,38 @@
+label{
+  width: 100%;
+  margin: .4rem 0;
+}
+
+h5{
+  margin: 1rem 0;
+  font-color: azure
+}
+
+.container{
+  color: azure
+}
+
+.currentQuestion{
+  font-size: .8rem;
+}
+
+.correct{
+  background-color: #0ea60eb4;
+  color: #cdf2d86e;
+}
+
+.incorrect{
+  background-color: #510508b9;
+  color: #d5a6a66e;
+}
+
+.container-label:focus{
+  background-color: #ffffff;
+}
+
+.card-btns {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin: 0 0.8rem;
+}

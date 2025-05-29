@@ -1,0 +1,32 @@
+.alert{
+  margin: .8rem 0;
+}
+.h5{
+  fontcolor: azure;
+}
+
+.form-label{
+  color: #c9c9c9;
+  font-size: larger;
+}
+
+form{
+  width: 380px;
+  line-height: 100%;
+}
+
+.form2 input{
+  margin-bottom: .5em;
+}
+
+.correct-input::placeholder{
+  background-color: #0ea60eb4;
+  color: #cdf2d86e;
+
+}
+
+.incorrect-input::placeholder{
+  background-color: #510508b9;
+  color: #d5a6a66e;
+
+}

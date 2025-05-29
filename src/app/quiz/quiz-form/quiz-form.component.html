@@ -1,0 +1,81 @@
+@if (!continue) {
+  <form action="" class="form1 needs validation" [formGroup]="form1">
+    <div class="mb-3">
+      <label for="quizName" class="form-label">Nome do Quiz:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="quizName"
+        placeholder="Insira o nome do quiz"
+        formControlName="quizName"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="numQuestions" class="form-label">Número de questões:</label>
+        <select
+          class="form-select"
+          id="numQuestions"
+          aria-label="Default select example"
+          formControlName="numQuestions"
+          >
+          <option disabled selected>Número de questões</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-dark" [disabled]="form1.invalid" (click)="onSubmitForm1(form1)">Continuar</button>
+      @if (form1.invalid) {
+        <div class="alert alert-light" role="alert">
+          Preencha os campos corretamente.
+        </div>
+      }
+    </form>
+  }
+
+  @if (continue && !isFinished) {
+    <form action="" class="form2 needs validation" [formGroup]="form2">
+      <div class="mb-3">
+        <label for="question" class="form-label">Questão {{numQuestion}}:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Insira uma questão"
+          formControlName="question"
+          />
+        </div>
+        <div class="mb3">
+          <label for="#" class="form-label">Respostas:</label>
+          <input
+            type="text"
+            class="form-control correct-input"
+            placeholder="Insira uma resposta correta*"
+            formControlName="res1"
+            />
+            <input
+              type="text"
+              class="form-control incorrect-input"
+              placeholder="Insira uma resposta incorreta*"
+              formControlName="res2"
+              />
+              <input
+                type="text"
+                class="form-control incorrect-input"
+                placeholder="Insira uma resposta incorreta"
+                formControlName="res3"
+                />
+                <input
+                  type="text"
+                  class="form-control incorrect-input"
+                  placeholder="Insira uma resposta incorreta"
+                  formControlName="res4"
+                  />
+                </div>
+                <button type="submit" class="btn btn-dark" [disabled]="form2.invalid" (click)="onSubmitForm2(form2)">Continuar</button>
+              </form>
+            }
+            @if (continue && !isFinished) {
+              <div class="alert alert-light" role="alert">Os campos com * são obrigatórios.</div>
+            }
+            @if (isFinished) {
+              <button type="submit" class="btn btn-dark" [disabled]="form2.invalid" (click)="finish()">Concluir</button>
+            }

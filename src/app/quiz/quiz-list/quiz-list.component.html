@@ -1,0 +1,33 @@
+<div class="container">
+  @if (quizzes) {
+    <div class="container-table">
+      <input type="text" class="form-control" placeholder="Pesquisar quiz por nome" (input)="search($event)">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          @for (quiz of quizzes; track quiz) {
+            <tr class="align-middle">
+              <td>{{ quiz.name }}</td>
+              <td>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                  <button type="button" class="btn btn-dark bi bi-play-fill" (click)="startQuiz(quiz.id)"></button>
+                  <button type="button" class="btn btn-secondary bi bi-pencil-fill" (click)="onEdit(quiz.id)"></button>
+                  <button type="button" class="btn btn-danger bi bi-trash-fill" (click)="onDelete(quiz.id)"></button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  } @else {
+    <div class="spinner-border text-secondary" role="status"></div>
+  }
+  <div ng-show="!quizzes.length" id="quizvazio">Você ainda não criou nenhum quiz.</div>
+</div>
+<button type="button" class="btn btn-dark" (click)="openQuizForm()">Criar quiz</button>

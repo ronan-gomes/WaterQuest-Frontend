@@ -1,0 +1,41 @@
+.container{
+    gap: 30px;
+    width: auto;
+}
+
+.title1{
+  font-family: "Alice","Calibri","sans-serif";
+  font-size:xx-large;
+  align-content: center;
+  font-weight: 600;
+  color: #fff;
+}
+.img-logo{
+    padding-left: 100px;
+
+}
+.copyright{
+    font-family: "Alice","Calibri","sans-serif";
+    font-style: normal;
+    align-content: end;
+    font-weight: 400;
+    color: #fff;
+
+}
+footer{
+    position: absolute;
+    font-size: 1rem;
+    bottom: 0;
+    padding: 0,6rem;
+}
+footer img{
+    height: 30px;
+    vertical-align: text-bottom;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+
+}
